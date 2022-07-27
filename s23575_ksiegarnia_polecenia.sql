@@ -195,31 +195,31 @@ values
 insert into wydanie
     (rok, numer, isbn, oprawa, cena, wydawnictwo, ksiazka_id)
 values
-    (2015,1,'978-83-777-9221-6','twarda',49.9,'Znak',1),
-    (2019,null,'978-83-280-6779-0','miekka',24.99,'Wilga',1),
-    (2004,1,'978-83-240-1263-3','twarda',65.9,'Znak',2),
-    (2017,null,'978-83-08-07320-9','miekka',24.9,'Wydawnictwo Literackie',3),
-    (2020,1,'978-83-08-07471-8','twarda',49.9,'Wydawnictwo Literackie',4),
-    (2021,2,'978-83-240-6405-2','twarda',39.99,'Znak',5),
-    (2017,1,'978-83-08-06417-7','twarda',28,'Wydawnictwo Literackie',6),
-    (2021,2,'978-83-240-6401-4','twarda',49.99,'Znak',7),
-    (2021,5,'978-83-8191-140-5','twarda',44.9,'Czarne',8),
-    (2008,1,'978-83-8739-197-2','twarda',39,'Czarne',8),
-    (2014,null,'978-83-6105-669-0','twarda',35,'Ossolineum',9),
-    (2021,null,'978-83-8234-081-5','miekka',35,'Prószyński i s-ka',10),
-    (2005,null,'978-83-7469-097-3','miekka',29.9,'Prószyński i s-ka',10),
-    (2018,null,'978-83-06-03500-1','twarda',59,'Państwowy Instytut Wydawniczy',11),
-    (2019,null,'978-83-950-4558-5','miekka',35,'Czuły Barbarzyńca',12),
-    (2012,null,'978-83-240-1879-6','twarda',64.9,'Znak',13),
-    (2021,null,'978-83-665-1142-2','twarda',69.9,'Officyna',13),
-    (2018,null,'978-83-06-03527-8','twarda',59,'Państwowy Instytut Wydawniczy',14),
-    (2016,1,'978-83-080-6224-1','miekka',44.9,'Znak',15),
-    (2020,2,'978-83-080-7095-6','miekka',44.9,'Wydawnictwo Literackie',15),
-    (2018,1,'978-83-080-6800-7','miekka',44.9,'Znak',16),
-    (2018,null,'978-83-624-0979-2','twarda',49.9,'Officyna',17),
-    (2021,2,'978-83-080-7328-5','twarda',74.9,'Wydawnictwo Literackie',18),
-    (2019,null,'978-83-244-1027-9','miekka',29.9,'Iskry',19),
-    (2017,null,'978-83-06-03406-6','twarda',59,'Państwowy Instytut Wydawniczy',20);
+1  1  (2015,1,'978-83-777-9221-6','twarda',49.9,'Znak',1),
+2  1  (2019,null,'978-83-280-6779-0','miekka',24.99,'Wilga',1),
+3  2  (2004,1,'978-83-240-1263-3','twarda',65.9,'Znak',2),
+4  3  (2017,null,'978-83-08-07320-9','miekka',24.9,'Wydawnictwo Literackie',3),
+5  4  (2020,1,'978-83-08-07471-8','twarda',49.9,'Wydawnictwo Literackie',4),
+6  5  (2021,2,'978-83-240-6405-2','twarda',39.99,'Znak',5),
+7  6  (2017,1,'978-83-08-06417-7','twarda',28,'Wydawnictwo Literackie',6),
+8  7  (2021,2,'978-83-240-6401-4','twarda',49.99,'Znak',7),
+9  8  (2021,5,'978-83-8191-140-5','twarda',44.9,'Czarne',8),
+10 8   (2008,1,'978-83-8739-197-2','twarda',39,'Czarne',8),
+11 9   (2014,null,'978-83-6105-669-0','twarda',35,'Ossolineum',9),
+12 10   (2021,null,'978-83-8234-081-5','miekka',35,'Prószyński i s-ka',10),
+13 10   (2005,null,'978-83-7469-097-3','miekka',29.9,'Prószyński i s-ka',10),
+14 11   (2018,null,'978-83-06-03500-1','twarda',59,'Państwowy Instytut Wydawniczy',11),
+15 12   (2019,null,'978-83-950-4558-5','miekka',35,'Czuły Barbarzyńca',12),
+16 13   (2012,null,'978-83-240-1879-6','twarda',64.9,'Znak',13),
+17 13   (2021,null,'978-83-665-1142-2','twarda',69.9,'Officyna',13),
+18 14   (2018,null,'978-83-06-03527-8','twarda',59,'Państwowy Instytut Wydawniczy',14),
+19 15   (2016,1,'978-83-080-6224-1','miekka',44.9,'Znak',15),
+20 15   (2020,2,'978-83-080-7095-6','miekka',44.9,'Wydawnictwo Literackie',15),
+21 16   (2018,1,'978-83-080-6800-7','miekka',44.9,'Znak',16),
+22 17  (2018,null,'978-83-624-0979-2','twarda',49.9,'Officyna',17),
+23 18   (2021,2,'978-83-080-7328-5','twarda',74.9,'Wydawnictwo Literackie',18),
+24 19   (2019,null,'978-83-244-1027-9','miekka',29.9,'Iskry',19),
+25 20   (2017,null,'978-83-06-03406-6','twarda',59,'Państwowy Instytut Wydawniczy',20);
 
 insert into tlumacz
     (imie, nazwisko)
@@ -497,3 +497,4 @@ select id, data_platnosci, data_wysylki, platnosc, if(data_wysylki >= data_platn
 select klient.id, imie, nazwisko, z.id from klient
     left outer join zamowienie z on klient.id = z.klient_id
     where z.id is null;
+
